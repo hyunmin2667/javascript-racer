@@ -70,6 +70,7 @@ var Util = {
 
   overlap: function(x1, w1, x2, w2, percent) {
     var half = (percent || 1)/2;
+    
     var min1 = x1 - (w1*half);
     var max1 = x1 + (w1*half);
     var min2 = x2 - (w2*half);
@@ -406,7 +407,7 @@ var SPRITES = {
   PLAYER_RIGHT:           { x:  995, y:  531, w:   80, h:   41 }
 };
 
-SPRITES.SCALE = 0.3 * (1/SPRITES.PLAYER_STRAIGHT.w) // the reference sprite width should be 1/3rd the (half-)roadWidth
+SPRITES.SCALE = 0.3* (1/SPRITES.PLAYER_STRAIGHT.w) // the reference sprite width should be 1/3rd the (half-)roadWidth (기준 스프라이트 폭은 (반쪽) 도로 폭의 1/3이어야 합니다)
 
 SPRITES.BILLBOARDS = [SPRITES.BILLBOARD01, SPRITES.BILLBOARD02, SPRITES.BILLBOARD03, SPRITES.BILLBOARD04, SPRITES.BILLBOARD05, SPRITES.BILLBOARD06, SPRITES.BILLBOARD07, SPRITES.BILLBOARD08, SPRITES.BILLBOARD09];
 SPRITES.PLANTS     = [SPRITES.TREE1, SPRITES.TREE2, SPRITES.DEAD_TREE1, SPRITES.DEAD_TREE2, SPRITES.PALM_TREE, SPRITES.BUSH1, SPRITES.BUSH2, SPRITES.CACTUS, SPRITES.STUMP, SPRITES.BOULDER1, SPRITES.BOULDER2, SPRITES.BOULDER3];
