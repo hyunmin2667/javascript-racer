@@ -1,13 +1,12 @@
 /**
  * @author mrdoob / http://mrdoob.com/
  */
-
-var Stats = function () {
+ const Stats = function() {
 
   var startTime = Date.now(), prevTime = startTime;
   var ms = 0, msMin = 1000, msMax = 0;
   var fps = 0, fpsMin = 1000, fpsMax = 0;
-  var frames = 0, mode = 0;mode
+  var frames = 0, mode = 0;
   var container = document.createElement( 'div' );
   container.id = 'stats';
   container.addEventListener( 'mousedown', function ( event ) { event.preventDefault(); setMode( ++ mode % 2 ) }, false );
@@ -141,3 +140,4 @@ var Stats = function () {
   
 };
 
+export default Stats;
